@@ -1,9 +1,8 @@
 import express from 'express';
+import { home } from './routes';
 
 const app = express();
 
-app.get('/', (request,response) {
-    return response.json({message: 'Api node typescript'});
-})
+app.get('/', home)
 
 app.listen(3333);
